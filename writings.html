@@ -1,0 +1,100 @@
+---
+layout: default
+title: Writings
+---
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="./css/writings.css">
+		<script type="text/javascript" id="MathJax-script" async
+  			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<title>Writings</title>
+	</head>
+	<body>
+
+		<p>These are some notes I wrote down starting from 2018. It was a way of documenting the way I thought about things
+		then and how I understood things. A way to explain to myself. Apologies for typos and such.</p>
+		<p>The dates in the files are the date of last editing. Unfortunately I did not keep track of when the files were
+		created (my computer does remember however, but it seems to be an unneccessary effort at this point).</p>
+		<p>I have tried to provide the appropriate references wherever possible.</p>
+
+		<br>
+
+		<div class="dropdown" id="analysis">
+			Analysis
+		</div>
+		<div  class = "droptable" id = "analysis_table">
+			<table>
+				<tr>
+					<td><a href="./test.pdf" target="_blank">blah1</a></td> <td>blah2</td>
+					<td>blah2.5</td>
+				</tr>
+				<tr>
+					<td>blh3</td> <td>blah4</td>
+				</tr>
+				<tr>
+					<td>blah5</td>
+				</tr>
+				<tr>
+					<td>blah6</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="dropdown" id="algebra">
+			Algebra
+		</div>
+		<div  class = "droptable" id = "algebra_table">
+			<table>
+				<tr>
+					<td>blah1</td> <td>blah2</td>
+				</tr>
+				<tr>
+					<td>blh3</td> <td>blah4</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="dropdown" id="others">
+			Others
+		</div>
+		<div  class = "droptable" id = "others_table">
+			<table>
+				<tr>
+					<td>blah1</td> <td>blah2</td>
+				</tr>
+				<tr>
+					<td>blh3</td> <td>blah4</td>
+				</tr>
+			</table>
+		</div>
+
+		<p>When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0 \hookrightarrow \) and they are
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</p>
+
+	<script type="text/javascript">
+		function table_handler(table_id){
+			var list_of_tables = document.getElementsByClassName("droptable");
+			for(i=0; i<list_of_tables.length; i++){
+				if (list_of_tables[i].id == table_id){
+					if ($(list_of_tables[i]).css("visibility")=="visible"){
+						$(list_of_tables[i]).css("visibility", "hidden");
+						$(list_of_tables[i]).css("opacity", "0");
+					}
+					else{
+						$(list_of_tables[i]).css("visibility", "visible");
+						$(list_of_tables[i]).css("opacity", "1");
+					}
+				}
+				else{
+					$(list_of_tables[i]).css("visibility", "hidden");
+					$(list_of_tables[i]).css("opacity", "0");
+				}
+			}
+		}
+	</script>
+	</body>
+</html>
