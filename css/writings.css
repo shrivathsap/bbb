@@ -53,7 +53,7 @@ table{
 
 .droptable td:hover {
 	content: "hello i am under the water byeee";
-	background-color: #fafafa;
+	background-color: #1a001a;
 	font-size: 17px;
 	transition-property: font-size;
 	transition-duration: .5s;
