@@ -3,7 +3,8 @@
   <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}" style="color:#cbbbeb;">{{ site.title | escape }}</a>
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+    <a class="site-title" rel="author" href="{{ "/" | relative_url }}" style="font-family: 'Fira Sans', sans-serif;">{{ site.title | escape }}</a>
 
     {%- if page_paths -%}
       <nav class="site-nav">
@@ -27,4 +28,8 @@
       </nav>
     {%- endif -%}
   </div>
+  <script>
+	  //somehow onload = apply_theme() did not work, so need to put script here
+	  apply_theme();
+  </script>
 </header>

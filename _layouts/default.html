@@ -2,8 +2,11 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
   {%- include head.html -%}
-
-  <body>
+  <body class = "dark-theme">
+	  <!-- apply theme here; onload will cause flashing and since body tag is being changed, needs to happen here -->
+	  <script>
+	  	apply_theme();
+	  </script>
 
     {%- include header.html -%}
 

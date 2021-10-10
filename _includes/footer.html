@@ -18,6 +18,19 @@
             {%- if site.email -%}
             <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
             {%- endif -%}
+
+			<li><strong id="svok33-change-theme" onclick = "change_theme()" style="cursor: pointer;">
+				<!-- use localStorage to get the text here; runs only on first load, subsequent changes use change_theme() -->
+				<script>
+					if(localStorage['svok33-github-theme'] == 'light'){
+						document.getElementById('svok33-change-theme').textContent = "Dark theme";
+					}
+					else{
+						document.getElementById('svok33-change-theme').textContent = "Light theme";
+					}
+				</script>
+			</strong></li>
+
         </ul>
       </div>
 

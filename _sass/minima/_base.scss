@@ -13,10 +13,19 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
+.light-theme{
+	color: $text-color-light;
+    background-color: $background-color-light;
+}
+
+.dark-theme{
+	color: $text-color;
+    background-color: $background-color;
+}
+
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-  color: $text-color;
-  background-color: $background-color;
+
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -111,7 +120,7 @@ a {
   }
 
   &:hover {
-    color: $text-color;
+    color: inherit;//$text-color;
     text-decoration: underline;
   }
 
@@ -151,7 +160,7 @@ code {
   @include relative-font-size(0.9375);
   border: 1px solid $grey-color-light;
   border-radius: 3px;
-  background-color: #1a081a//#eef;
+  background-color: inherit;//#1a081a//#eef;
 }
 
 code {
@@ -235,7 +244,7 @@ table {
   // color: lighten($text-color, 18%);
   border-collapse: collapse;
   border: 1px solid $grey-color-light;
-  background-color: $background-color;
+  background-color: inherit;// $background-color;
   tr {
     &:nth-child(even) {
       // background-color: lighten($grey-color-light, 6%);
