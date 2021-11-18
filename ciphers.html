@@ -1,0 +1,43 @@
+---
+layout: page
+title: ciphers
+---
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Ciphers</title>
+		<script src="./scripts/convert.js" charset="utf-8"></script>
+		<style>
+			select, .cipher_list option{
+				background-color: inherit;
+				color:inherit;
+			}
+			.buttons, .buttons > button{
+				background-color: inherit;
+				color:inherit;
+				text-align:center; margin:0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<select id = "cipher_list">
+			<option>---Select a cipher---</option>
+			<option>Caesar</option>
+			<option>Atbash</option>
+			<option>Alpha numeric</option>
+		</select>
+		<br>
+		<br>
+		<div class="textareas" style="text-align:center; margin:0 auto;">
+			<textarea id="plaintext" rows="20" cols="45"></textarea>
+			<textarea id="ciphertext" rows="20" cols="45"></textarea>
+		</div>
+		<br>
+		<div class="buttons">
+			<button type="button" name="convert" onclick="convert()">Convert</button>
+			<button type="button" name="clear" onclick="put_plain_text(''); put_cipher_text('')">Clear</button>
+		</div>
+	</body>
+</html>
