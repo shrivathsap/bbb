@@ -8,7 +8,43 @@ title: Miscellaneous
 		<meta charset="utf-8">
 		<title>Miscellaneous</title>
 	</head>
+	<style media="screen">
+		.grid-container{
+			display: grid;
+			grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+			grid-row-gap: 20px;
+			grid-column-gap: 10px;
+			justify-content: center;
+			align-content: center;
+		}
+		.grid-item{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			height: 200px;
+			/* width: 300px */
+		}
+	</style>
 	<body>
+		<div class="grid-container">
+			<div class="grid-item" style="background-image: url(https://source.unsplash.com/random/?maths)">
+				Mathematical links
+			</div>
+			<div class="grid-item" style="background-image: url(https://source.unsplash.com/random/?climate)">
+				<a href="xkcd.com">Climate change</a>
+			</div>
+			<div class="grid-item" style="background-image: url(https://source.unsplash.com/random/?climate)">
+				<a href="xkcd.com">Climate change</a>
+			</div>
+			<div class="grid-item" style="background-image: url('https://source.unsplash.com/random/?climate, change')">
+				<a href="xkcd.com">Climate change</a>
+			</div>
+			<div class="grid-item" style="background-image: url(https://source.unsplash.com/random/?climate)">
+				<a href="xkcd.com">Climate change</a>
+			</div>
+		</div>
+
 		<h3>Mathematical</h3>
 		<ul>
 			<li>asdasd</li>
