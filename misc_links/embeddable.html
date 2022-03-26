@@ -6,9 +6,9 @@
 		<meta property="og:title" content="Site Title" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://svok33.github.io/bbb/misc_links/embeddable.html" />
-		<!-- <meta property="og:image" content="http://my.site.com/images/thumb.png" /> -->
+		<meta property="og:image" content="https://svok33.github.io/bbb/misc_links/embeddable.html#canvas" />
 		<meta property="og:description" content="Site description" />
-		<meta name="theme-color" content="#FF0000">
+		<meta name="theme-color" content="#00FF00">
 	</head>
 	<body>
 		Hello, this is a webpage
@@ -36,5 +36,8 @@
 		percentage = 1-(days_between(today, end)/days_between(start, end));
 		c.fillStyle = "green";
 		c.fillRect(0, 0, canvas.width*percentage, canvas.height);
+		meta_tags = document.getElementsByTagName('meta')
+		meta_tags[0].content = days_between(today, end);
+		meta_tags[4].content = percentage;
 	</script>
 </html>
