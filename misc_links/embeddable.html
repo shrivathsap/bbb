@@ -37,7 +37,7 @@
 		c.fillStyle = "green";
 		c.fillRect(0, 0, canvas.width*percentage, canvas.height);
 		meta_tags = document.getElementsByTagName('meta')
-		meta_tags[1].content = days_between(today, end);
-		meta_tags[5].content = percentage;
+		meta_tags[1].content = Math.ceil(days_between(today, end))+' days left!';
+		meta_tags[5].content = (Math.floor(percentage*10000))/100+'% done';
 	</script>
 </html>
