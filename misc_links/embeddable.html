@@ -13,11 +13,16 @@
 			end = new Date(2022, 5, 8);
 			today = new Date();
 			percentage = 1-(days_between(today, end)/days_between(start, end));
+			title_ = Math.ceil(days_between(today, end)) + ' days left!'
+			console.log(title_);
 		    // Just replacing the value of the 'content' attribute will not work.
 		    // $('meta[name=description]').remove();
-		    $('head').append( '<meta property="og:description" content=(Math.floor(percentage*10000))/100+"% done">' );
+			$('head').append( '<meta property="og:title">' );
+			$('meta[property="og:title"]').attr('content', Math.ceil(days_between(today, end)) + ' days left!');
+		    $('head').append( '<meta property="og:description">' );
+			$('meta[property="og:description"]').attr('content', Math.floor(percentage*10000)/100+' % done');
 			// $('meta[name=title]').remove();
-		    $('head').append( '<meta property="og:title" content= Math.ceil(days_between(today, end))+" days left!">' );
+
 		</script>
 		<!-- <meta property="og:title" content="Site Title" /> -->
 		<meta property="og:type" content="website" />
@@ -52,8 +57,5 @@
 		percentage = 1-(days_between(today, end)/days_between(start, end));
 		c.fillStyle = "green";
 		c.fillRect(0, 0, canvas.width*percentage, canvas.height);
-		meta_tags = document.getElementsByTagName('meta')
-		meta_tags[1].content = Math.ceil(days_between(today, end))+' days left!';
-		meta_tags[5].content = (Math.floor(percentage*10000))/100+'% done';
 	</script>
 </html>
