@@ -15,9 +15,9 @@
 			percentage = 1-(days_between(today, end)/days_between(start, end));
 		    // Just replacing the value of the 'content' attribute will not work.
 		    // $('meta[name=description]').remove();
-		    $('head').append( '<meta name="description" content=(Math.floor(percentage*10000))/100+"% done">' );
+		    $('head').append( '<meta property="og:description" content=(Math.floor(percentage*10000))/100+"% done">' );
 			// $('meta[name=title]').remove();
-		    $('head').append( '<meta name="description" content= Math.ceil(days_between(today, end))+" days left!">' );
+		    $('head').append( '<meta property="og:title" content= Math.ceil(days_between(today, end))+" days left!">' );
 		</script>
 		<!-- <meta property="og:title" content="Site Title" /> -->
 		<meta property="og:type" content="website" />
