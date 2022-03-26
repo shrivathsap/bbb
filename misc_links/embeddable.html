@@ -3,12 +3,6 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Website Name</title>
-		<meta property="og:title" content="Site Title" />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://svok33.github.io/bbb/misc_links/embeddable.html" />
-		<meta property="og:image" content="https://svok33.github.io/resources/photos/insects/ant.jpg" />
-		<meta property="og:description" content="Site description" />
-		<meta name="theme-color" content="#00FF00">
 		<script type='text/javascript' src='http://code.jquery.com/jquery-1.8.2.js'></script>
 		<script type='text/javascript'>
 			function days_between(date1, date2){
@@ -20,11 +14,17 @@
 			today = new Date();
 			percentage = 1-(days_between(today, end)/days_between(start, end));
 		    // Just replacing the value of the 'content' attribute will not work.
-		    $('meta[name=description]').remove();
+		    // $('meta[name=description]').remove();
 		    $('head').append( '<meta name="description" content=(Math.floor(percentage*10000))/100+"% done">' );
-			$('meta[name=title]').remove();
+			// $('meta[name=title]').remove();
 		    $('head').append( '<meta name="description" content= Math.ceil(days_between(today, end))+" days left!">' );
 		</script>
+		<!-- <meta property="og:title" content="Site Title" /> -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://svok33.github.io/bbb/misc_links/embeddable.html" />
+		<meta property="og:image" content="https://svok33.github.io/resources/photos/insects/ant.jpg" />
+		<!-- <meta property="og:description" content="Site description" /> -->
+		<meta name="theme-color" content="#00FF00">
 	</head>
 	<body>
 		Hello, this is a webpage
